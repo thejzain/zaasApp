@@ -1,24 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Recycle extends StatelessWidget {
-  const Recycle({Key? key}) : super(key: key);
+class Recycle extends StatefulWidget {
+  Recycle({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Main();
-  }
+  State<Recycle> createState() => _RecycleState();
 }
 
-class Main extends StatefulWidget {
-  Main({Key? key}) : super(key: key);
-
-  @override
-  State<Main> createState() => _MainState();
-}
-
-class _MainState extends State<Main> {
+class _RecycleState extends State<Recycle> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column();
   }
 }
