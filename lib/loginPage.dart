@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'homePage.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -15,52 +16,66 @@ class _LoginPageState extends State<LoginPage> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(),
-        Text('ZAAS',style: TextStyle(fontWeight: FontWeight.bold, fontSize:30),),
+        Text(
+          'ZAAS',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+        ),
         SizedBox(
           height: 30,
         ),
-        Text('RECYCLE TOGETHER',style: TextStyle(fontSize: 18),),
+        Text(
+          'RECYCLE TOGETHER',
+          style: TextStyle(fontSize: 18),
+        ),
         SizedBox(
           height: 70,
         ),
-        Text('LOGIN',style: TextStyle(fontSize: 20),),
-        SizedBox(
-          height: 30,
-        ),
-        SizedBox(
-        width: 250,
-          child:TextField(
-                decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'USERNAME',
-              ),
-            ),
+        Text(
+          'LOGIN',
+          style: TextStyle(fontSize: 20),
         ),
         SizedBox(
           height: 30,
         ),
         SizedBox(
           width: 250,
-          child:TextField(
-                decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'PASSWORD',
-              ),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'USERNAME',
             ),
+          ),
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        SizedBox(
+          width: 250,
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'PASSWORD',
+            ),
+          ),
         ),
         SizedBox(
           height: 20,
         ),
         Container(
           child: ElevatedButton(
-             style: ElevatedButton.styleFrom(
-            primary: Colors.green,
-            textStyle: const TextStyle(
-                color: Colors.white,
-                 fontSize: 15, 
-                 fontStyle: FontStyle.normal),
-          ),
-            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              primary: Colors.green,
+              textStyle: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontStyle: FontStyle.normal),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
             child: const Text('Login'),
           ),
         ),

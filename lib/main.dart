@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'loginPage.dart';
 import 'homePage.dart';
 import 'recycle.dart';
+import 'reward.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.green),
       home: Scaffold(
         backgroundColor: Colors.greenAccent[100],
-        body: Recycle(),
+        body: LoginPage(),
       ),
     );
   }
